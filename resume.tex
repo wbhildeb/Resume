@@ -1,0 +1,150 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\newcommand{\award}[2]{#1 \hfill {\em #2}}
+
+\name{Walker Hildebrand}
+\address{204 898 4936 \hspace{0.5em} wbhildeb@uwaterloo.ca}
+\address
+{
+    \href{https://github.com/wbhildeb}{\faGithub{ }wbhildeb} \hspace{0.5em}
+    \href{https://www.linkedin.com/in/wbhildeb/}{\faLinkedin{ }wbhildeb}
+}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL STRENGTHS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Strengths}
+
+    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+    Languages &  C\# $\cdot$ Java $\cdot$ VB.NET $\cdot$ SQL $\cdot$ C $\cdot$ C++ $\cdot$ Python $\cdot$ Bash $\cdot$ HTML/CSS \\
+    Tools     & .NET Framework $\cdot$ Visual Studio $\cdot$ UNIX $\cdot$ GitHub $\cdot$ Netbeans $\cdot$ Atlassian Tools \\
+    \end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+    
+    \begin{workexperience}
+        {Payworks}
+        {Software Developer}
+        {May 2018 - Present}
+        {
+            \item Deployed the automated testing framework, developing it from its preliminary phase.
+            \item Reinvented the method of interacting with grids on the site, drastically simplifying the process of mapping new tables.
+            \item Optimized element construction within the framework, reducing duplicated code by 92\%.
+            \item Built the system for automatically navigating through the site.
+        }
+    \end{workexperience}
+
+    \begin{workexperience}
+        {Sweet Tops Ice Cream}
+        {Freelance Developer}
+        {May 2017 - Aug 2017}
+        {
+            \item Developed a Java desktop application for a business of 30+ employees that allows easy schedule management and remote schedule viewing for employees through automatic upload to Google Drive.
+            \item Created a graphical user interface using Swing, implementing an intuitive and professional design.
+            \item Integrated a relational database to store employee and shift data using SQLite3 and JDBC.
+        }
+    \end{workexperience}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Side Projects}
+    
+    \begin{sideproject}
+        {\href{https://github.com/wbhildeb/Propositional-Logic}{\faGithub{} Propositional Logic Calculator}}
+        {C\#, .NET Framework}
+        {Sep 2018}
+        {
+            \item Built a program that parses string input into a well-formed propositional formula.
+            \item Created functionality that allows the user to automatically generate graphical valuation tables.
+        }
+    \end{sideproject}
+
+    \begin{sideproject}
+        {\href{https://github.com/wbhildeb/Multi-Choice-Quiz-App/blob/master/Quizzer/src/MainGUI.java}{\faGithub{} Multiple Choice Quizzer}}
+        {Java, Python}
+        {Mar 2017}
+        {
+            \item Wrote a program that parses text files containing multiple choice questions into a single XML file.
+            \item Developed an application that lets a user quiz themselves through an intuitive GUI.
+            \item Implemented features that allow users to save questions as well as add their own.
+        }
+    \end{sideproject}
+
+    \begin{sideproject}
+        {\href{https://github.com/wbhildeb/Texas-Hold-em-Calculator}{\faGithub{} Poker Statistics Calculator}}
+        {Java, Swing GUI}
+        {Dec 2016}
+        {
+            \item Created a desktop application that calculates the odds of winning a hand in Texas Hold'em Poker.
+            \item Designed the core algorithms and refined them thoroughly for efficiency and accuracy.
+        }
+    \end{sideproject}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	AWARDS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Awards}
+    \award{Third place in University of Manitoba Math Contest}{2017} \\
+    \award{Top 15\% in Euclid Mathematics Contest}{2017} \\
+    \award{Certificate of Distinction in Fermat Mathematics Contest}{2016} \\
+    \award{Winnipeg School Division Book Awards for Academic Achievement (x3)}{2014 - 2016}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+    {\bf University of Waterloo} \hfill {\em Expected Jun 2022} \\
+    Bachelor of Computer Science \hfill {\em President's Scholarship of Distinction}
+    
+\end{rSection}
+    
+    
+\end{document}
