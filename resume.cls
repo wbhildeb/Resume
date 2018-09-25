@@ -25,12 +25,17 @@
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 \usepackage{array} % Required for boldface (\bf and \bfseries) tabular columns
 \usepackage{ifthen} % Required for ifthenelse statements
+\usepackage{color}
 
 \pagestyle{empty} % Suppress page numbers
 
 %----------------------------------------------------------------------------------------
 %	HEADINGS COMMANDS: Commands for printing name and address
 %----------------------------------------------------------------------------------------
+
+\definecolor{accent}{RGB}{120, 0, 0}
+\definecolor{main}{RGB}{0, 0, 0}
+
 
 \def \name#1{\def\@name{#1}} % Defines the \name command to set name
 \def \@name {} % Sets \@name to empty by default
@@ -67,7 +72,9 @@
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
+    \color{accent}
     \hfil{\MakeUppercase{\namesize\bf \@name}}\hfil
+    \color{main}
     \nameskip\break
   \endgroup
 }
@@ -95,7 +102,9 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
+  \color{accent}
   \MakeUppercase{\bf #1} % Section title
+  \color{main}
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
