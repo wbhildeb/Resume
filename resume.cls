@@ -121,9 +121,9 @@
 
 \newcommand{\compactitemize}[1]
 {
-  \vspace{-0.5em}
+  \vspace{-0.3em}
   \begin{itemize}[leftmargin=1em]
-    \itemsep -0.5em
+    \itemsep -0.3em
     #1
   \end{itemize}
 }
