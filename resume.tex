@@ -37,7 +37,7 @@
 {
     \href{https://github.com/wbhildeb}{\faGithub{ wbhildeb}} \hspace{0.5em}
     \href{https://www.linkedin.com/in/wbhildeb/}{\faLinkedin{ wbhildeb} } \hspace{0.5em}
-    \href{http://www.walkerhildebrand.com/}{\faGlobe{ walkerhildebrand.com} }
+    % \href{http://www.walkerhildebrand.com/}{\faGlobe{ walkerhildebrand.com} }
 }
 
 \begin{document}
@@ -80,9 +80,22 @@
 \begin{rSection}{Work Experience}
     
     \begin{workexperience}
+        {McAfee}
+        {Software Developer}
+        {Sep 2019 - Dec 2019}
+        {Leading cybersecurity company, provider of McAfee WebAdvisor browser extension \& native app}
+        {
+            \item Developed a messaging system between the testing framework and extension that exposed internal functionality to testers, but kept the application's internals secure from the public
+            \item Created a proxy server with C\# and Powershell to mimic responses of the extension's HTTPS requests  
+            \item Researched, built and modified Chromium source code to provide a McAfee browser proof of concept 
+            \item Created an internal tool for manipulating and backing up the LevelDB and IndexedDB implementation of Chrome and Firefox's \texttt{browser.storage.local} API
+        }
+    \end{workexperience}
+
+    \begin{workexperience}
         {Rocscience}
         {Software Developer}
-        {Jan 2019 - Present}
+        {Jan 2019 - Apr 2019}
         {World leader in providing advanced geotechnical software to civil engineering and mining industries}
         {
             \item Created a CAD module to model the construction of complex 3D embankment loads and 
@@ -110,18 +123,6 @@
 
     \vspace{1em}
 
-    \begin{workexperience}
-        {Sweet Tops Ice Cream}
-        {Freelance Developer}
-        {May 2017 - Aug 2017}
-        {Small business that I approached with a solution to their issues managing 30+ part-time employees}
-        {
-            \item Developed a \textbf{Java} application to assist in payroll, scheduling and employee management
-            \item Implemented automatic pay calculation, schedule distribution, and schedule conflict detection
-            \item Integrated a \textbf{relational database} to store employee and schedule data using SQLite3 and JDBC
-        }
-    \end{workexperience}
-
 \end{rSection}
 
 
@@ -131,32 +132,32 @@
 \pagebreak
 
 \begin{rSection}{Projects}
+
+    \begin{sideproject}
+        {\href{https://walk-site.herokuapp.com/sub-playlists}{\faGlobe{} Spotify SubPlaylists}}
+        {Node.js, Firebase, Angular}
+        {October 2019 - Present}
+        {
+            \item A web app that allows users to setup playlists `trees' -- songs added to a playlist get added to ancestors
+            \item Collaborated with classmates, using leadership skills to assign roles and manage the project structure
+            \item Structured the project to easily be extendible and allow new features such as locking playlists, track listening history, and monthly playlists with most listened songs
+        }
+    \end{sideproject}
+    
+    \vspace{1em}
     
     \begin{sideproject}
         {\href{https://github.com/wbhildeb/EasyDocs}{\faGithub{} EasyDocs (DeltaHacks V)}}
         {Python, SQL, Django \& Javascript}
         {January 2019}
         {
-            \item Developed a web application for general practitioners that generates patient information templates, highlighting important data \& potential medical issues
+            \item A web application for general practitioners that generates patient information templates, highlighting important data \& potential medical issues
             \item Designed an intricate \textbf{SQL} database to relate medical ailments, treatments, side-effects, conflicting medicines, family histories, as well as HCP, patient and scheduling data
             \item Implemented risk assessment for medical conditions based on patient data \& other risk factors
             \item Analyzed patient illnesses, treatments \& side-effects to warn healthcare providers of potential conflicts
         }
     \end{sideproject}
 
-    \vspace{1em}
-
-    \begin{sideproject}
-        {\href{https://github.com/wbhildeb/Multiquadris}{\faGithub{} Multiquadris (CS246 Final Project)}}
-        {C++}
-        {December 2018}
-        {
-            \item Created a multiplayer, command line version of Tetris, with special actions and varying difficulties
-            \item Designed an extendable, well-structured, program through the use of appropriate \textbf{design patterns}
-            \item Received a grade of \textbf{105\%} for excellent design and the addition of several extra features
-        }
-    \end{sideproject}
-    
     \vspace{1em}
 
     \begin{sideproject}
@@ -175,14 +176,13 @@
     \vspace{1em}
 
     \begin{sideproject}
-        {Mini Projects}
-        {Assorted Languages}
+        {Smaller Projects}
+        {Various Languages}
         {}
         {
-            \item 10FasterFingers - Created a Chrome extension that allows users to cheat several typing test websites. Used a javascript OCR library to overcome the anti-cheat system.
-            \item WalkerHildebrand.com - Working on a personal portfolio website using \textbf{MEAN stack}
-            \item Spotify Weekly Update - Used \textbf{Express} and Spotify's API to continuously update a \textbf{MongoDB} database of my listening history, and create a weekly playlist of my most listened to songs
-            \item Ride The Bus - Developed a program in \textbf{C\#} that simulates a card game. Programmed and analysed different playing strategies and their efficacy
+            \item {\href{https://github.com/wbhildeb/FoosBoard}{\faGithub{} FoosBoard}} - A modular express application that allows users to track workplace foosball games via Slack with team names, smart leaderboards and player stats
+            \item {\href{https://github.com/wbhildeb/Ten-Faster-Fingers}{\faGithub{} 10FasterFingers}} - Chrome extension that allows users to cheat on several typing test websites. Used a javascript OCR library to outwit the anit-cheat measures.
+            \item {\href{https://github.com/wbhildeb/Ride-The-Bus}{\faGithub{} Ride The Bus}} - Developed a program in \textbf{C\#} that simulates a card game. Programmed and analysed different playing strategies and their efficacy
         }
     \end{sideproject}
 
@@ -201,9 +201,7 @@
     \award{Placed in the top 15\% in several national math contests}{2014-2017} \\
     \award{3 WSD Academic Achievement Awards}{2014-2017}\\
     \award{Manitoba Provincial Record - 400m Medley Relay}{2010-Present}\\
-    \award{Hobby Bass Guitarist \& Multi-Instrumentalist}{ }\\
-    \award{Intermediate Squash Player}{}\\
-    \award{Digital Artist (Geometric \& Programmatic Art)}{}\\
+    \award{Multi-Instrumentalist (Guitar, Bass, Piano)}{ }\\
 \end{rSection}
 
 
