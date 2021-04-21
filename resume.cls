@@ -141,11 +141,10 @@
   \vspace{0.5em} % Some space after the list of bullet points
 }
 
-\newenvironment{workexperience}[5] % Company JobTitle Date ItemizedDetails
+\newenvironment{workexperience}[4] % Company JobTitle Date ItemizedDetails
 {
-  {\bf #1} $\mid$ #2 \hfill {\em #3} \\
-  #4
-  \compactitemize{#5}
+  {\bf #1} $\mid$ #2 \hfill {\em #3}
+  \compactitemize{#4}
 }
 
 \newenvironment{sideproject}[4] % ProjectName ToolsUsed Date ItemizedDetails
