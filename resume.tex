@@ -78,7 +78,16 @@
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Work Experience}
-    
+    \begin{workexperience}
+        {NVIDIA}
+        {TensorRT - Graph Compiler Integration}
+        {January 2021 - April 2021}
+        {
+            \item Implemented validation for engine compilation and inference of Tacotron2 + Waveglow speech synthesis using Jasper model for speech recognition, primarily testing dynamic sequence length input
+            \item Developed accuracy tests for TensorRT's INT8 support via Quantization-Aware Training with BERT, compared to ONNX runtime and native PyTorch over the Stanford Question Answering Dataset
+            \item Prepared the release of TensorRT 8.0 by working on several compiler-related, release-blocking bugs
+        }
+    \end{workexperience}
     \begin{workexperience}
         {NVIDIA}
         {Hardware Infrastructure}
@@ -110,9 +119,8 @@
         {
             \item Created a CAD module to model the construction of complex 3D embankment loads and 
             conduct time-dependant vertical soil consolidation analysis using \textbf{C++}, \textbf{MFC} and \textbf{OpenGL}
-            \item Developed algorithms to validate, discretize, and analyze the loads with a focus on time efficiency
+            \item Developed algorithms to validate, discretize, and analyze the loads using a graph-theory approach
             \item Improved accuracy of settlement analysis while connecting the CAD module to the engine
-            \item Redesigned several geometric and mathematical tools with an efficient, graph theory based approach
         }
     \end{workexperience}
     
@@ -124,7 +132,6 @@
             \item Deployed the automated testing framework, developing it in \textbf{C\#} from a preliminary phase into a working product ready to perform smoke, end-to-end, acceptance and regression tests
             \item Played a decisive role in the design and implementation of the framework's core architecture
             \item Reinvented the method of interacting with inconsistent grid components throughout the site, \\immensely reducing the amount of boilerplate code and greatly improving maintainability
-            \item Utilized \textbf{advanced design patterns} to abstract and encapsulate the construction of elements
         }
     \end{workexperience}
 
