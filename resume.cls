@@ -108,7 +108,7 @@
   \sectionlineskip
   \hrule % Horizontal line
   \begin{list}{}{ % List for each individual item in the section
-    \setlength{\leftmargin}{1.5em} % Margin within the section
+    \setlength{\leftmargin}{0em} % Margin within the section
   }
   \item[]
 }{
@@ -122,7 +122,7 @@
 \newcommand{\compactitemize}[1]
 {
   \vspace{-0.3em}
-  \begin{itemize}[leftmargin=1em]
+  \begin{itemize}[leftmargin=1.2em]
     \itemsep -0.3em
     #1
   \end{itemize}
