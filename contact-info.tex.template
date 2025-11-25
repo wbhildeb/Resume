@@ -1,0 +1,7 @@
+\address
+{
+    \href{https://github.com/YOUR_GITHUB}{\faGithub{ YOUR_GITHUB}}
+    \hspace{0.5em} \faEnvelope{ your.email@example.com }
+    \hspace{0.5em} \href{https://www.linkedin.com/in/YOUR_LINKEDIN/}{\faLinkedin{ YOUR_LINKEDIN} }
+    \hspace{0.5em} \faPhone{ (555) 555-5555 } 
+}
