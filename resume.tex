@@ -26,7 +26,9 @@
 \usepackage{fontawesome}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{graphicx}
 
+\newcommand{\smallplus}{\raisebox{.4\height}{\scalebox{.6}{+}}}
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \newcommand{\award}[2]{#1 \hfill {\em #2}}
@@ -35,9 +37,8 @@
 \address
 {
     \href{https://github.com/wbhildeb}{\faGithub{ wbhildeb}} \hspace{0.5em}
-    \faEnvelope{ walker99113@gmail.com} \hspace{0.5em}
-    \href{https://www.linkedin.com/in/wbhildeb/}{\faLinkedin{ wbhildeb} } \hspace{0.5em}
-    \faPhone{ (628) 213-9484}
+    \faEnvelope{ walker99113@gmail.com } \hspace{0.5em}
+    \href{https://www.linkedin.com/in/wbhildeb/}{\faLinkedin{ wbhildeb} }
 }
 
 \begin{document}
@@ -45,9 +46,8 @@
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
-% As a passionate programmer from a very early age, I have always enjoyed and prioritized taking on more responsibility than what is expected of me.
-% In previous internships, my supervisors have acknowledged my ability to contribute to design meetings filled with more experienced developers, and to properly execute tasks assigned to me with minimal supervision.
-% As a very quick learner, and a skilled developer, I'm able to work efficiently either independently or within a team to produce quality software.
+% Interned at {\bf NVIDIA} twice, {\bf Meta} once during covid while earning my Bachelor's of Computer Science at {\bf University of Waterloo}. Returned to Meta full-time for only 3 days before being hit by mass layoffs.
+% Spent 2.5 years building computer vision systems and infra at Voxel AI, safety and operational insights in thousands of industrial workspaces. INSERT INTENTION FOR FUTURE ROLES
 
 %----------------------------------------------------------------------------------------
 %	TECHNICAL STRENGTHS SECTION
@@ -55,10 +55,7 @@
 
 \begin{rSection}{Technical Strengths}
 
-    \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-    Languages &  C++ $\cdot$ Python $\cdot$ C\# $\cdot$ Javascript $\cdot$ Shell Scripting $\cdot$ Java $\cdot$ SQL\\
-    Tools     & UNIX $\cdot$ Git $\cdot$ PyTorch $\cdot$ Node.js $\cdot$ .NET $\cdot$ gdb $\cdot$ NoSQL Databases $\cdot$ OpenGL\\
-    \end{tabular}
+    Go $\cdot$ Python $\cdot$ C++ $\cdot$ SQL $\cdot$ Bazel $\cdot$ Terraform $\cdot$ Kubernetes $\cdot$ OCI $\cdot$ Docker $\cdot$ OpenTelemetry $\cdot$ Video Processing $\cdot$ Networking (layers 4-7) $\cdot$ Message Queues $\cdot$ Stream Processing $\cdot$ Event-Driven Microservices
 
 \end{rSection}
 
@@ -77,36 +74,102 @@
 
 \begin{rSection}{Work Experience}
     \begin{workexperience}
-        {Facebook/Meta}
-        {Network Delivery Systems - Monitoring}
-        {August 2021 - December 2021}
+        {Voxel}
+        {Senior Platform Software Engineer}
+        {Jan 2023 - Jul 2025}
         {
-            \item Implemented a stream processing pipeline to analyze the health of Meta's entire delivery network
-            \item Reduced error detection latency from 2+ hours to live results on a scale of 2 TB / 24 hours
-            \item Redesigned device failure detection algorithm, improving signal-to-noise ratio by a factor of 2.5
-            \item Conducted and presented research on live network analysis to aide future iterations of the project
+            \textbf{Cross-Functional Leadership:}
+            Directly supported Fortune 500 deployments (CVS, FedEx, Chewy) addressing boutique requirements to enable initial rollout and unlock expansion opportunities.
+           
+            \vspace{-0.2em}
+
+            Served as engineering liaison with external contractors for IAM and infrastructure migration.
+
+            \vspace{-0.2em}
+
+            Conducted 100+ interviews, trained new interviewer cohorts, and built technical evaluation rubric. Contributed to defining official company core values and cultural initiatives.
+
+            \textbf{Video Infrastructure:} Architected multiplexed video streaming platform processing 2 Gbps continuous throughput across 2,000 cameras and 150 globally distributed edge devices, managing 500 TB (250 years) of video and serving 500 req/s with 99.999996\% reliability. Led team building GDPR-compliant, multi-region, and multi-cloud architecture enabling expansion into Europe and customers not working with AWS.
+
+            \vspace{-0.2em}
+
+            Built on-demand video transcoding supporting HLS and actor anonymization, supporting bursty reducing storage costs 50\%+ and unblocking Fortune 500 multi-site deals
+
+
+            \textbf{Edge-Cloud Distributed Systems:} Architected cloud-agnostic edge communication platform with custom authentication using token provisioning and short-lived certificates for mTLS. Migrating edge telemetry to this system reduced COGS by 5\%. 
+
+            \textbf{Distributed Architecture \& Data Platform:} Architected data communication layer of perception pipeline transitioning from single-threaded processes to scalable, Flink-based distributed architecture.
+
+            \vspace{-0.2em}
+            Built data warehouse from ground up, enabling data mining, business intelligence, and aggregate analytics that accelerated feature development
+
+            \textbf{Platform \& Developer Velocity:} Increased deployment velocity 84x for config changes by establishing control plane ecosystem and decoupling config management from the release cycle.
+            \vspace{-0.2em}
+
+            Developed widely-adopted IaC and service initialization modules for cloud resources with built-in monitoring (for SOC II compliance), standardizing infrastructure provisioning across organization.
+
+
+            % {\bf Edge-Cloud Communication:} Architected cloud-agnostic edge communication platform for 150+ globally distributed devices, managing 2,000+ cameras with custom authentication using token provisioning and mTLS using short-lived certificates.
+            % \compactitemize{
+            
+            % \item  Consolidated edge services into a single Golang binary on edge for managing auth, telemetry, video transcoding and transmission. Build out a cloud infrastructure using Kubernetes, Terraform, Golang. Simply transitioning edge telemetry to this system reduced cloud COGS by 5\%.
+            % }
+
+            % \compactitemize{
+            % \item Architected a multiplexed video streaming platform handling over 2 Gbps of continuous throughput, managing 500 TB (250 years) of video  and serving 500+ requests per second with 99.999996\% reliability.
+
+            % \item Led two engineers, designing for GDPR-compliant video transmission, supporting both real-time inference and ad-hoc querying with a multi-region, multi-cloud architecture.
+
+            % \item Built out on-demand dynamic video transcoding via S3 Object Lambdas, supporting HLS streaming and anonymization of actors. Unblocked \$ TODO in ARR through multi-site deals with Fortune 500 customers and improved p95 incident alert latency by 5 minutes.
+
+            % \item Architected the data commincation layer of Voxel's perception pipeline to transition from single-threaded processes to Flink-based distributed architecture.
+
+
+            % \item Built data warehouse and analytics infrastructure from ground up, opening up data aggregation features, accelerating feature development and enabling data mining 
+            % \& business intelligence capabilities.
+            % }
+
+            % \item Reduced video storage costs 50\%+ by designing non-overlapping H.265 fragment storage with on-demand transcoding via S3 Object Lambda, processing 2 Gbps across 2,000 cameras while enabling ad-hoc time-range queries and live camera feeds with incident highlights
+            % \item Reduced infrastructure costs 5\% by migrating edge telemetry from CloudWatch to self-hosted OpenTelemetry collectors, validating cloud-agnostic architecture serving production workloads at scale
+            % \item Designed dynamic anonymized video transcoding infrastructure achieving P95 latency of 1.7s, unblocking Fortune 500 multi-site deals by building transcoding pipeline enabling  ML-based anonymization service
+            % \item Increased deployment velocity 336x (bi-weekly to hourly) for 95\% of changes by architecting configuration management service, decoupling config updates from release cycles while establishing control plane for ecosystem
+            % \item Developed widely-adopted Terraform modules for S3, SNS, SQS, and Lambda with built-in SOC II compliance monitoring, establishing infrastructure-as-code standards across engineering organization
+            % \item Tech-led multiplexed video streaming service development and release across multiple teams, coordinating distributed engineering organization to unblock asynchronous video processing capabilities
+        }
+    \end{workexperience}
+
+    \begin{workexperience}
+        {Facebook/Meta}
+        {SWE Intern | Network Delivery Systems}
+        {Aug 2021 - Dec 2021}
+        {
+            Created a stream processing pipeline to analyze the health of Meta's delivery network at a scale of 2 billion events/day, improving signal-to-noise ratio by 2.5x and reducing insight latency from hours to seconds.
         }
     \end{workexperience}
 
     \begin{workexperience}
         {NVIDIA}
-        {TensorRT - Graph Compiler Integration}
-        {January 2021 - April 2021}
+        {SWE Intern | TensorRT Graph Compiler Integration}
+        {Jan 2021 - Apr 2021}
         {
-            \item Implemented validation for engine compilation and inference of Tacotron2 + Waveglow speech synthesis using Jasper model for speech recognition, primarily testing dynamic sequence length input
-            \item Developed accuracy tests for TensorRT's INT8 support via Quantization-Aware Training with BERT, compared to ONNX runtime and native PyTorch over the Stanford Question Answering Dataset
-            \item Prepared the release of TensorRT 8.0 by working on several compiler-related, release-blocking bugs
+            % \item Implemented validation for engine compilation and inference of Tacotron2 + Waveglow speech synthesis using Jasper model for speech recognition, primarily testing dynamic sequence length input
+            % \item Developed accuracy tests for TensorRT's INT8 support via Quantization-Aware Training with BERT, compared to ONNX runtime and native PyTorch over the Stanford Question Answering Dataset
+            % \item Prepared the release of TensorRT 8.0 by working on several compiler-related, release-blocking bugs
+Enabled TensorRT 8.0 release by developing INT8 quantization validation for BERT, implementing speech synthesis testing pipelines with dynamic sequence length, and resolving release-blocking compiler issues.
         }
     \end{workexperience}
     \begin{workexperience}
         {NVIDIA}
-        {Hardware Infrastructure}
-        {May 2020 - August 2020}
+        {SWE Intern | Hardware Infrastructure}
+        {May 2020 - Aug 2020}
         {
-            \item Implemented a QuadTree class and nearest neighbour algorithm using a thin template idiom
-            \item Optimized object deserialization and cached common resources, reducing boot time from 6 mins to 1
-            \item Implemented several important general enhancements throughout the suite of NVIDIA's CAD tools
-            \item Researched and implemented changes for porting several CAD tools to use an updated version of Qt and summarize methods for faster rendering of objects using the Qt's OpenGL interface
+            Accelerated CAD tool performance with 6x (i.e. 5 min) boot time reduction, developed QuadTree-based spatial algorithms, and demoed OpenGL rendering enhancements across NVIDIA's hardware design suite.
+
+            % \item Implemented a QuadTree class and nearest neighbour algorithm using a thin template idiom
+            % \item Optimized object deserialization and cached common resources, reducing boot time from 6 mins to 1
+            % \item Implemented several important general enhancements throughout the suite of NVIDIA's CAD tools
+            % \item Researched and implemented changes for porting several CAD tools to use an updated version of Qt and summarize methods for faster rendering of objects using the Qt's OpenGL interface
+
         }
     \end{workexperience}
 

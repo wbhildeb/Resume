@@ -121,7 +121,7 @@
 
 \newcommand{\compactitemize}[1]
 {
-  \vspace{-0.3em}
+  \vspace{-0.5em}
   \begin{itemize}[leftmargin=1.2em]
     \itemsep -0.3em
     #1
@@ -141,10 +141,19 @@
   \vspace{0.5em} % Some space after the list of bullet points
 }
 
-\newenvironment{workexperience}[4] % Company JobTitle Date ItemizedDetails
+\newenvironment{itemizedworkexperience}[4] % Company JobTitle Date ItemizedDetails
 {
-  {\bf #1} $\mid$ #2 \hfill {\em #3}
+   {\bf #1} $\mid$ #2 \hfill {\em #3}
   \compactitemize{#4}
+}
+
+\newenvironment{workexperience}[4] % Company JobTitle Date Description
+{
+  \underline{{\bf #1} $\mid$ #2} \hfill {\em #3}
+
+  \vspace{-0.3em}
+  #4
+ 
 }
 
 \newenvironment{sideproject}[4] % ProjectName ToolsUsed Date ItemizedDetails
