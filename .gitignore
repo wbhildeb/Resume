@@ -4,5 +4,13 @@
 # Except for
 !.gitignore
 !*.tex
-!*.pdf
 !*.cls
+!Makefile
+
+# PDF handling: only allow public (redacted) version
+!resume-public.pdf
+!contact-info.tex.template
+
+# But ignore contact info (contains private email/phone)
+contact-info.tex
+contact-info.tex.backup
