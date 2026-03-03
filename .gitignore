@@ -1,16 +1,26 @@
-# Ignore everything
-*
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.bcf
+*.run.xml
 
-# Except for
-!.gitignore
-!*.tex
-!*.cls
-!Makefile
-
-# PDF handling: only allow public (redacted) version
-!resume-public.pdf
-!contact-info.tex.template
-
-# But ignore contact info (contains private email/phone)
+# Private contact info (keep out of git)
 contact-info.tex
 contact-info.tex.backup
+
+# Private resume PDF (only commit redacted version)
+resume.pdf
+
+# OS files
+.DS_Store
+*.swp
+*~

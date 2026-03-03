@@ -1,0 +1,45 @@
+{
+    // LaTeX Workshop configuration
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "make-private",
+            "tools": ["make-private"]
+        },
+        {
+            "name": "make-public",
+            "tools": ["make-public"]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "make-private",
+            "command": "make",
+            "args": ["private"],
+            "env": {}
+        },
+        {
+            "name": "make-public",
+            "command": "make",
+            "args": ["public"],
+            "env": {}
+        }
+    ],
+
+    // Auto-build on save
+    "latex-workshop.latex.autoBuild.run": "onSave",
+
+    // Use make-private as default recipe
+    "latex-workshop.latex.recipe.default": "first",
+
+    // Disable LaTeX Workshop's own build commands
+    "latex-workshop.latex.build.forceRecipeUsage": true,
+
+    // PDF viewer settings
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+
+    // File associations
+    "files.associations": {
+        "*.tex": "latex"
+    }
+}
