@@ -34,21 +34,10 @@
 \newcommand{\award}[2]{#1 \hfill {\em #2}}
 
 \name{Walker Hildebrand}
-\address
-{
-    \href{https://github.com/wbhildeb}{\faGithub{ wbhildeb}} \hspace{0.5em}
-    \faEnvelope{ walker99113@gmail.com } \hspace{0.5em}
-    \href{https://www.linkedin.com/in/wbhildeb/}{\faLinkedin{ wbhildeb} }
-    \hspace{0.5em} \faPhone{ (415) 806-5969 }
-}
+% Contact info is in contact-info.tex (git-ignored for privacy)
+\input{contact-info.tex}
 
 \begin{document}
-
-%----------------------------------------------------------------------------------------
-%	INTRODUCTION
-%----------------------------------------------------------------------------------------
-% Interned at {\bf NVIDIA} twice, {\bf Meta} once during covid while earning my Bachelor's of Computer Science at {\bf University of Waterloo}. Returned to Meta full-time for only 3 days before being hit by mass layoffs.
-% Spent 2.5 years building computer vision systems and infra at Voxel AI, safety and operational insights in thousands of industrial workspaces. INSERT INTENTION FOR FUTURE ROLES
 
 %----------------------------------------------------------------------------------------
 %	TECHNICAL STRENGTHS SECTION
@@ -56,7 +45,7 @@
 
 \begin{rSection}{Technical Strengths}
 
-    Go $\cdot$ Python $\cdot$ C++ $\cdot$ SQL $\cdot$ Bazel $\cdot$ Terraform $\cdot$ Kubernetes $\cdot$ OCI $\cdot$ Docker $\cdot$ OpenTelemetry $\cdot$ Video Processing $\cdot$ Networking (layers 4-7) $\cdot$ Message Queues $\cdot$ Stream Processing $\cdot$ Event-Driven Microservices
+    Go $\cdot$ Python $\cdot$ C++ $\cdot$ Bazel $\cdot$ vLLM $\cdot$ Terraform $\cdot$ Kubernetes $\cdot$ AWS $\cdot$ Docker $\cdot$ OpenTelemetry $\cdot$ Distributed Systems $\cdot$ Networking (L4--7) $\cdot$ Stream Processing $\cdot$ mTLS $\cdot$ Triton $\cdot$ LLM \& CV Inference
 
 \end{rSection}
 
@@ -79,63 +68,19 @@
         {Senior Platform Software Engineer}
         {Jan 2023 - Jul 2025}
         {
-            \textbf{Cross-Functional Leadership:}
-            Directly supported Fortune 500 deployments (CVS, FedEx, Chewy) addressing boutique requirements to enable initial rollout and unlock expansion opportunities.
-           
+            \textbf{CV Inference Platform:}
+            Led technical strategy for Voxel’s video inference infrastructure. Collaborated with ML engineers to design the inference pipeline data layer, enabling scaling from single-threaded runners to a distributed, Flink-based architecture. Built on-demand transcoding with integrated real-time ML inference achieving 1.7s P95 latency at millions of requests/hour; reduced video storage COGS 70\% through intelligent fragment management.
             \vspace{-0.2em}
 
-            Served as engineering liaison with external contractors for IAM and infrastructure migration.
+            Architected Voxel’s end-to-end video platform spanning ingestion, storage, retention, transcoding, streaming, and delivery. Designed for cloud-agnostic, multi-region deployment, sustaining multi-Gbps continuous throughput at 99.999\% uptime across hundreds of terabytes and thousands of cameras on globally distributed edge devices; GDPR-compliant architecture enabled enterprise and international expansion.
 
-            \vspace{-0.2em}
+            Shaped platform architecture spanning capacity management, model deployment, and online inference reliability at scale. Managed Triton Inference Servers on GPU-accelerated instances with HPA-driven autoscaling for latency-sensitive services; designed custom capacity allocation per camera feed and contributed to model-mesh architecture plans for dynamic load distribution. Coordinated model rollouts via config-driven pipelines backed by object storage.
 
-            Conducted 100+ interviews, trained new interviewer cohorts, and built technical evaluation rubric. Contributed to defining official company core values and cultural initiatives.
+            \textbf{Cloud-Agnostic Edge Platform:}
+            Built a cloud-agnostic edge communication platform on Kubernetes with unified ingress, abstracting cloud provider dependencies for enterprise portability. Implemented zero-trust authentication via token provisioning and mTLS with short-lived certificate rotation. Migrated edge telemetry from CloudWatch to self-hosted OpenTelemetry, reducing cloud COGS 5\%.
 
-            \textbf{Video Infrastructure:} Architected multiplexed video streaming platform processing 2 Gbps continuous throughput across 2,000 cameras and 150 globally distributed edge devices, managing 500 TB (250 years) of video and serving 500 req/s with 99.999996\% reliability. Led team building GDPR-compliant, multi-region, and multi-cloud architecture enabling expansion into Europe and customers not working with AWS.
-
-            \vspace{-0.2em}
-
-            Built on-demand video transcoding supporting HLS and actor anonymization, supporting bursty reducing storage costs 50\%+ and unblocking Fortune 500 multi-site deals
-
-
-            \textbf{Edge-Cloud Distributed Systems:} Architected cloud-agnostic edge communication platform with custom authentication using token provisioning and short-lived certificates for mTLS. Migrating edge telemetry to this system reduced COGS by 5\%. 
-
-            \textbf{Distributed Architecture \& Data Platform:} Architected data communication layer of perception pipeline transitioning from single-threaded processes to scalable, Flink-based distributed architecture.
-
-            \vspace{-0.2em}
-            Built data warehouse from ground up, enabling data mining, business intelligence, and aggregate analytics that accelerated feature development
-
-            \textbf{Platform \& Developer Velocity:} Increased deployment velocity 84x for config changes by establishing control plane ecosystem and decoupling config management from the release cycle.
-            \vspace{-0.2em}
-
-            Developed widely-adopted IaC and service initialization modules for cloud resources with built-in monitoring (for SOC II compliance), standardizing infrastructure provisioning across organization.
-
-
-            % {\bf Edge-Cloud Communication:} Architected cloud-agnostic edge communication platform for 150+ globally distributed devices, managing 2,000+ cameras with custom authentication using token provisioning and mTLS using short-lived certificates.
-            % \compactitemize{
-            
-            % \item  Consolidated edge services into a single Golang binary on edge for managing auth, telemetry, video transcoding and transmission. Build out a cloud infrastructure using Kubernetes, Terraform, Golang. Simply transitioning edge telemetry to this system reduced cloud COGS by 5\%.
-            % }
-
-            % \compactitemize{
-            % \item Architected a multiplexed video streaming platform handling over 2 Gbps of continuous throughput, managing 500 TB (250 years) of video  and serving 500+ requests per second with 99.999996\% reliability.
-
-            % \item Led two engineers, designing for GDPR-compliant video transmission, supporting both real-time inference and ad-hoc querying with a multi-region, multi-cloud architecture.
-
-            % \item Built out on-demand dynamic video transcoding via S3 Object Lambdas, supporting HLS streaming and anonymization of actors. Unblocked \$ TODO in ARR through multi-site deals with Fortune 500 customers and improved p95 incident alert latency by 5 minutes.
-
-            % \item Architected the data commincation layer of Voxel's perception pipeline to transition from single-threaded processes to Flink-based distributed architecture.
-
-
-            % \item Built data warehouse and analytics infrastructure from ground up, opening up data aggregation features, accelerating feature development and enabling data mining 
-            % \& business intelligence capabilities.
-            % }
-
-            % \item Reduced video storage costs 50\%+ by designing non-overlapping H.265 fragment storage with on-demand transcoding via S3 Object Lambda, processing 2 Gbps across 2,000 cameras while enabling ad-hoc time-range queries and live camera feeds with incident highlights
-            % \item Reduced infrastructure costs 5\% by migrating edge telemetry from CloudWatch to self-hosted OpenTelemetry collectors, validating cloud-agnostic architecture serving production workloads at scale
-            % \item Designed dynamic anonymized video transcoding infrastructure achieving P95 latency of 1.7s, unblocking Fortune 500 multi-site deals by building transcoding pipeline enabling  ML-based anonymization service
-            % \item Increased deployment velocity 336x (bi-weekly to hourly) for 95\% of changes by architecting configuration management service, decoupling config updates from release cycles while establishing control plane for ecosystem
-            % \item Developed widely-adopted Terraform modules for S3, SNS, SQS, and Lambda with built-in SOC II compliance monitoring, establishing infrastructure-as-code standards across engineering organization
-            % \item Tech-led multiplexed video streaming service development and release across multiple teams, coordinating distributed engineering organization to unblock asynchronous video processing capabilities
+            \textbf{Technical Leadership:}
+            Increased deployment velocity 84x by establishing a control plane ecosystem decoupling config management from the release cycle. Developed widely-adopted Terraform modules with built-in SOC II monitoring. Directly partnered with technical teams at CVS and FedEx to resolve deployment blockers.
         }
     \end{workexperience}
 
@@ -144,127 +89,19 @@
         {SWE Intern | Network Delivery Systems}
         {Aug 2021 - Dec 2021}
         {
-            Created a stream processing pipeline to analyze the health of Meta's delivery network at a scale of 2 billion events/day, improving signal-to-noise ratio by 2.5x and reducing insight latency from hours to seconds.
+            Built a stream processing pipeline to analyze health across Meta's delivery network at 2~billion events/day, improving signal-to-noise ratio 2.5x and reducing insight latency from hours to seconds.
         }
     \end{workexperience}
 
     \begin{workexperience}
         {NVIDIA}
-        {SWE Intern | TensorRT Graph Compiler Integration}
+        {SWE Intern | TensorRT Inference \& Graph Compiler}
         {Jan 2021 - Apr 2021}
         {
-            % \item Implemented validation for engine compilation and inference of Tacotron2 + Waveglow speech synthesis using Jasper model for speech recognition, primarily testing dynamic sequence length input
-            % \item Developed accuracy tests for TensorRT's INT8 support via Quantization-Aware Training with BERT, compared to ONNX runtime and native PyTorch over the Stanford Question Answering Dataset
-            % \item Prepared the release of TensorRT 8.0 by working on several compiler-related, release-blocking bugs
-Enabled TensorRT 8.0 release by developing INT8 quantization validation for BERT, implementing speech synthesis testing pipelines with dynamic sequence length, and resolving release-blocking compiler issues.
+            Contributed to TensorRT 8.0 release on the inference optimization team: developed INT8 quantization accuracy validation for BERT inference on SQuAD, implemented dynamic sequence-length testing pipelines for Tacotron2 + WaveGlow speech synthesis, and resolved release-blocking compiler issues with direct focus on inference correctness and efficiency trade-offs.
         }
     \end{workexperience}
-    \begin{workexperience}
-        {NVIDIA}
-        {SWE Intern | Hardware Infrastructure}
-        {May 2020 - Aug 2020}
-        {
-            Accelerated CAD tool performance with 6x (i.e. 5 min) boot time reduction, developed QuadTree-based spatial algorithms, and demoed OpenGL rendering enhancements across NVIDIA's hardware design suite.
-
-            % \item Implemented a QuadTree class and nearest neighbour algorithm using a thin template idiom
-            % \item Optimized object deserialization and cached common resources, reducing boot time from 6 mins to 1
-            % \item Implemented several important general enhancements throughout the suite of NVIDIA's CAD tools
-            % \item Researched and implemented changes for porting several CAD tools to use an updated version of Qt and summarize methods for faster rendering of objects using the Qt's OpenGL interface
-
-        }
-    \end{workexperience}
-
-    \vspace{1em}
 
 \end{rSection}
 
-
-%----------------------------------------------------------------------------------------
-%	PROJECTS SECTION
-%----------------------------------------------------------------------------------------
-% \pagebreak
-
-% \begin{rSection}{Projects}
-
-%     \begin{sideproject}
-%         {{\faGlobe{} Soprano for Spotify}}
-%         {Node.js, Firebase, Angular}
-%         {October 2019 - April 2020}
-%         {
-%             \item A web app that allows users to setup playlist trees -- songs added to a playlist get added to ancestors
-%             \item Lead a small dev team of classmates, developing skills in project management and software design
-%             \item Structured the project to be easily extendible and allow new features such as locking playlists, tracking listening habits, and auto-generate playlists with the user's most listened songs
-%         }
-%     \end{sideproject}
-    
-%     \vspace{1em}
-    
-%     \begin{sideproject}
-%         {\href{https://github.com/wbhildeb/EasyDocs}{\faGithub{} EasyDocs (DeltaHacks V)}}
-%         {Python, SQL, Django \& Javascript}
-%         {January 2019}
-%         {
-%             \item A web application for general practitioners that generates patient information templates, highlighting important data \& potential medical issues
-%             \item Designed an intricate \textbf{SQL} database to relate medical ailments, treatments, side-effects, conflicting medicines, family histories, as well as HCP, patient and scheduling data
-%             \item Implemented risk assessment for medical conditions based on patient data \& other risk factors
-%             \item Analyzed patient illnesses, treatments \& side-effects to warn healthcare providers of potential conflicts
-%         }
-%     \end{sideproject}
-
-%     \vspace{1em}
-
-%     \begin{sideproject}
-%         {\href{https://github.com/wbhildeb/localize-cs}{\faGithub{} LocalizeCS }}
-%         {Bash}
-%         {October 2018}
-%         {
-%             \item Created a command-line program allowing users to create and sync local versions of remote environments as
-%             a solution to the frustrations of completing assignments on UWaterloo's remote servers
-%             \item Built Git-inspired functionality to push, pull, sync and ``diff" changes between the environments
-%             \item Implemented features that allow remote execution of commands and easy connection to the remote
-%             \item Shared the program amongst classmates and peers who frequently use it for assignments
-%         }
-%     \end{sideproject}
-    
-%     \vspace{1em}
-
-%     \begin{sideproject}
-%         {Bite-sized fun Projects}
-%         {Various Languages}
-%         {}
-%         {
-%             \item {\href{https://github.com/wbhildeb/FoosBoard}{\faGithub{} FoosBoard}} - A modular express application that allows users to track workplace foosball games via Slack with team names, smart leaderboards and player stats
-%             \item {\href{https://github.com/wbhildeb/Ten-Faster-Fingers}{\faGithub{} 10FasterFingers}} - Chrome extension that allows users to cheat on several typing test websites. Used a javascript OCR library to outwit the anit-cheat measures.
-%             \item {\href{https://github.com/wbhildeb/Ride-The-Bus}{\faGithub{} Ride The Bus}} - Developed a program in \textbf{C\#} that simulates a card game. Programmed and analysed different playing strategies and their efficacy
-%         }
-%     \end{sideproject}
-
-    % \vspace{1em}
-
-    % Please see my projects page at \href{http://www.walkerhildebrand.com/projects}{www.walkerhildebrand.com/projects} for more information.
-
-% \end{rSection}
-
-%----------------------------------------------------------------------------------------
-%	AWARDS SECTION
-%----------------------------------------------------------------------------------------
-
-% \begin{rSection}{Academic \& Personal Achievements}
-%     \award{Third place in University of Manitoba Math Contest}{2017} \\
-%     \award{Placed in the top 15\% in several national math contests}{2014-2017} \\
-%     \award{3 WSD Academic Achievement Awards}{2014-2017}\\
-%     \award{Manitoba Provincial Record in Swimming - 400m Medley Relay}{2010-Present}\\
-% \end{rSection}
-
-% %----------------------------------------------------------------------------------------
-% %	INTERESTS SECTION
-% %----------------------------------------------------------------------------------------
-
-% \begin{rSection}{Extracurricular interests}
-%     \award{Playing Music - Guitar, Bass \& Piano}{ }\\
-%     \award{Visual Art - Programmatic \& Geometric Art}{ }\\
-%     \award{Martial Arts - Judo \& Muay Thai}{ }\\
-%     \award{Hiking \& living up to my name as a Walker}{ }\\
-% \end{rSection}
-    
 \end{document}
